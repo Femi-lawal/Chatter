@@ -1,0 +1,15 @@
+<div class="profile clearfix">
+  <%= link_to gravatar_for(@account, size: 75), @account %>
+  <div><%= link_to @account.name, @account %></div>
+  <div><%= @account.email %></div>
+
+  <% if account_signed_in? %> 
+    <div id="follow_form">
+      <% if current_account.following?(@account) %>
+        <%= render 'shared/unfollow', account: @account %>
+      <% else %>
+        <%= render 'shared/follow', account: @account %>
+      <% end %>
+    </div>
+  <% end %>
+</div>

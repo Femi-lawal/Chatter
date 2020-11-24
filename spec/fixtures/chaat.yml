@@ -1,0 +1,3 @@
+chaat:
+  chaat_body: <%= Faker::Quote.famous_last_words %>
+  account: fixture_account_1

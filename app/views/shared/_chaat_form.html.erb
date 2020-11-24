@@ -1,0 +1,8 @@
+<div class="chaat-box">
+  <%= form_with model: current_account.chaats.new do |form| %>
+    <div class="field">
+      <%= form.text_area :chaat_body, placeholder: "Compose new Chaat..." %>
+    </div>
+    <%= form.submit "Post", class: "btn btn-large btn-primary" %>
+  <% end %>
+</div>

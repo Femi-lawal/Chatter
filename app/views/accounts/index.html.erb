@@ -1,0 +1,17 @@
+<% provide(:title, 'Accounts') %>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <%= render 'shared/account_info' if account_signed_in? %>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <div class="timeline">
+      <h2 class="title">All Accounts</h2>
+      <ul class="chaats">
+        <%= render @accounts %>
+      </ul>
+    </div>
+  </div>
+</div>

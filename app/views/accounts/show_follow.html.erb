@@ -1,0 +1,24 @@
+<% provide(:title, @title) %>
+
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <%= render 'shared/profile' %>
+      <%= render 'shared/stats' %>
+      <%= render 'shared/chaat_form' if @account == current_account%>
+    </section>
+  </aside>
+  <div class="col-md-8">
+    <div class="timeline">
+      <h2 class="title"><%= @title %></h2>
+      <% if @accounts.any? %>
+      <ul class="chaats">
+        <%= render @accounts %>
+        <div class="paginate">
+          <%= will_paginate @accounts, renderer: BootstrapPagination::Rails %>
+        </div>
+      </ul>
+      <% end %>
+    </div>
+  </div>
+</div>

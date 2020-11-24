@@ -1,0 +1,16 @@
+<% @account ||= current_account %>
+
+<div class="stats">
+  <table>
+  <tr>
+    <th>Chaats</th>
+    <th>Following</th>
+    <th>Followers</th>
+  </tr>
+  <tr>
+    <td><%= link_to @account.chaats.count, account_path(@account) %></td>
+    <td><%= link_to @account.following.count, following_account_path(@account) %></td>
+    <td><%= link_to @account.followers.count, followers_account_path(@account) %></td>
+  </tr>
+  </table>
+</div>
