@@ -14,7 +14,7 @@ def generate_account!
     name = Faker::Name.name
     account_name = name.parameterize
     email = "#{name}#{n}@femilawal.com"
-    password = "password"
+    password = 'password'
     Account.create!(
                  name: name,
                  email: email,
