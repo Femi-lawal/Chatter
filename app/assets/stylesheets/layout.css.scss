@@ -63,6 +63,10 @@ textarea {
     border-bottom-right-radius: 5px;
 }
 
+.chaat_container {
+    border: 10px blue
+}
+
 .debug_dump {
     clear: both;
     float: left;
@@ -109,6 +113,46 @@ textarea {
     margin-right: 10px;
 }
 
+.chaat-actions>a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+// round images
+.image {
+    img {
+        border-radius: 50%;
+    }
+}
+
+.fa-trash-o {
+    color: red($color: #000000);
+}
+
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+    box-shadow: 0 2px 3px rgba(10, 10, 10, 0.1), 0 0 0 1px rgba(10, 10, 10, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.gravatar {
+    border-radius: 50%;
+}
+
+.float-child-avatar {
+    width: -10%;
+    float: left;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+}
+
 .accounts {
     list-style: none;
     margin: 0;
@@ -153,4 +197,27 @@ textarea {
     .fa {
         margin-right: 8px;
     }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
 }
