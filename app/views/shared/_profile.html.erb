@@ -3,7 +3,7 @@
   <div><%= link_to @account.name, @account %></div>
   <div><%= @account.email %></div>
 
-  <% if account_signed_in? %> 
+  <% if account_signed_in? && current_account != @account%> 
     <div id="follow_form">
       <% if current_account.following?(@account) %>
         <%= render 'shared/unfollow', account: @account %>
