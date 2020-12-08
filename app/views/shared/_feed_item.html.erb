@@ -1,19 +1,29 @@
-<li class="chaat clearfix">
-  <%= link_to gravatar_for(feed_item.account), feed_item.account %>
-  <div class="chaat_body">
-    <div class="account">
-      <%= link_to feed_item.account.name, feed_item.account %>
-    </div>
-    <div class="chaat-chaat_body">
-      <%= feed_item.chaat_body %>
-    </div>
-    <div class="chaat-footer">
-      <time><%= time_ago_in_words(feed_item.created_at) %> ago.</time>
-      <% if current_account == (feed_item.account) %>
-      <div class="chaat-actions">
-        <%= link_to "delete", feed_item, method: :delete, data: { confirm: "You sure?" }, title: feed_item.chaat_body %>
+<div class="chaat_container float-container">
+  <li class="chaat clearfix">
+   	<article class="media">
+			<figure class="image float-child-avatar">
+				<%= gravatar_image_tag(feed_item.account.email, size: 64, alt: feed_item.account.name) %>
+			</figure>
+    <div class="media-body float-child">
+    <div class="chaat_body">
+      <div class="account">
+        <%= link_to feed_item.account.name, feed_item.account %>
       </div>
+      <div class="chaat-chaat_body">
+        <%= feed_item.chaat_body %>
+      </div>
+      <div class="chaat-footer">
+        <time><%= time_ago_in_words(feed_item.created_at) %> ago.</time>
+      </div>
+    </div>
+    </div>
+   </article> 
+  </li>
+  <% if current_account == (feed_item.account) %>
+    <div class="chaat-actions">
+      <%= link_to feed_item, method: :delete, data: { confirm: "You sure?" }, title: feed_item.chaat_body do %>
+        <i class="fa fa-trash-o" alt="delete" color="red"></i>
       <% end %>
     </div>
-  </div>
-</li>
+  <% end %>
+</div>
