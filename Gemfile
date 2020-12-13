@@ -10,6 +10,7 @@ gem 'bootsnap', require: false
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'font-awesome-sass', '~> 4.3'
+gem 'friendly_id'
 gem 'gravatar_image_tag', '~> 1.2'
 gem 'jquery-rails'
 gem 'notifier'
