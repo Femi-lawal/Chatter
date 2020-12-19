@@ -126,6 +126,7 @@ GEM
       mini_portile2 (~> 2.4.0)
     notifier (0.5.2)
     orm_adapter (0.5.0)
+    pg (1.2.3)
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
@@ -274,6 +275,7 @@ DEPENDENCIES
   jquery-rails
   listen
   notifier
+  pg
   pry-byebug
   pry-rails
   puma
