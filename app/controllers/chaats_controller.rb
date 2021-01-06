@@ -4,7 +4,6 @@ class ChaatsController < ApplicationController
   before_action :authenticate_account!
 
 
-  # TODO: show all chaats despite non-signed in account.
   def index
     @chaat = current_account.chaats.build if account_signed_in?
     @feed_items = Chaat.includes(:account).paginate(page: params[:page])
