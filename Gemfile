@@ -47,9 +47,6 @@ end
 
 
 group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'listen', '~> 3.0.5'
-
   gem 'letter_opener'
   gem 'rb-readline'
   gem 'pry'
@@ -59,6 +56,7 @@ end
 group :development do
   gem 'annotate'
   gem 'bullet'
+  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
