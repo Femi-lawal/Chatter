@@ -45,6 +45,17 @@ group :development, :test do
   gem 'simplecov', require: false
 end
 
+
+group :development do
+  # Access an IRB console on exception pages or by using <%= console %> in views
+  gem 'listen', '~> 3.0.5'
+
+  gem 'letter_opener'
+  gem 'rb-readline'
+  gem 'pry'
+  gem 'database_cleaner'
+end
+
 group :development do
   gem 'annotate'
   gem 'bullet'
