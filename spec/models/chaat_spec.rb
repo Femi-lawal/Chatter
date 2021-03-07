@@ -1,5 +1,20 @@
 # frozen_string_literal: true
 
+# == Schema Information
+#
+# Table name: chaats
+#
+#  id         :uuid             not null, primary key
+#  chaat_body :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#  account_id :integer
+#
+# Indexes
+#
+#  index_chaats_on_account_id                 (account_id)
+#  index_chaats_on_account_id_and_created_at  (account_id,created_at)
+#
 require "rails_helper"
 
 RSpec.describe Chaat, type: :model do

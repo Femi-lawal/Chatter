@@ -37,17 +37,24 @@ group :development, :test do
   gem 'capybara'
   gem 'factory_bot_rails'
   gem 'faker'
-  gem 'pry-byebug'
-  gem 'pry-rails'
   gem 'rspec_junit_formatter'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
   gem 'simplecov', require: false
 end
 
+
+group :development do
+  gem 'letter_opener'
+  gem 'rb-readline'
+  gem 'pry'
+  gem 'database_cleaner'
+end
+
 group :development do
   gem 'annotate'
   gem 'bullet'
+  # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'listen'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
