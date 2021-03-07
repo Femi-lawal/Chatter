@@ -7,8 +7,8 @@ class Sentiment
     @analyzer.load_defaults
   end
 
-  def analyze(sentiment)
-    @analyzer.sentiment sentimer
+  def analyze(word)
+    @analyzer.sentiment word
   end
 
 end
